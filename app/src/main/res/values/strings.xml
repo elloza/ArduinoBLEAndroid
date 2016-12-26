@@ -5,5 +5,10 @@
     <string name="ble_service_title">BLE Service</string>
     <string name="ble_service_content">BLE Service running</string>
 
+    <string name="arduino_connection">Arduino connection:</string>
+    <string name="server_connection">Server connection:</string>
+
+    <string name="pivot_status">Pivot current status:</string>
+
 
 </resources>

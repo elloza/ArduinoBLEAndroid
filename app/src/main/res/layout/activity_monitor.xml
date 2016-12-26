@@ -1,17 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_monitor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.lozasolutions.arduinoservice.Monitor">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:text="@string/arduino_connection"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:text="@string/server_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:text="@string/pivot_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/arduino_connection"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="148dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/server_connection"
+        tools:layout_editor_absoluteY="49dp"
+        tools:layout_editor_absoluteX="140dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pivot_status"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/server_connection"
+        app:layout_constraintLeft_toRightOf="@+id/textView3"
+        android:layout_marginStart="8dp" />
+</android.support.constraint.ConstraintLayout>
