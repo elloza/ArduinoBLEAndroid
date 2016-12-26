@@ -2,6 +2,11 @@ package com.lozasolutions.arduinoservice.di.modules;
 
 import android.content.Context;
 
+import com.google.gson.Gson;
+import com.lozasolutions.arduinoservice.utils.GenericRxBus;
+
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -21,5 +26,17 @@ public final class ApplicationModule {
     @Provides
     Context provideContext() {
         return mContext;
+    }
+
+    @Singleton
+    @Provides
+    Gson providesGSON(){
+        return new Gson();
+    }
+
+    @Singleton
+    @Provides
+    GenericRxBus providesBus(){
+        return new GenericRxBus();
     }
 }

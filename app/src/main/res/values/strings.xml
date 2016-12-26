@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ArduinoService</string>
+
+
+    <string name="ble_service_title">BLE Service</string>
+    <string name="ble_service_content">BLE Service running</string>
+
+
 </resources>
